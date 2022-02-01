@@ -9,27 +9,55 @@
 	display: none;
 }
 
+#articles-button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+}
+
 
 .menuButtonUnselected {
-	background-color: red;
+	background-color: black;
+	color: white;
+	border: none;
 }
 
-.menuButtonUnselected::before {
-	content: url(/_includes/img/icons/expand-more.svg);
-}
+
 
 .menuButtonSelected {
-	background-color: blue;
+	background-color: white;
+	color: black;
+	border: none;
 }
 
-.menuButtonSelected::before {
-	content: "▲ ";
+
+
+
+.articleButtonUnselected {
+	background-color: black;
+	color: white;
+	border: none;
 }
+
+
+
+.articleButtonSelected {
+	background-color: white;
+	color: black;
+	border: none;
+}
+
+
+
 
 
 @media only screen and (max-width: 600px) {
   #menuButton {
-	display: block;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
 	}
 	
 	#main-nav-links {

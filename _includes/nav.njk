@@ -11,10 +11,13 @@
   }
   
 
-		if(document.getElementById("menuButton").className == "menuButtonUnselected")
-	   document.getElementById("menuButton").className = "menuButtonSelected";
+		
+	
+	
+	if(document.getElementById("mnu-drp-arrow").innerHTML == "expand_more")
+	document.getElementById("mnu-drp-arrow").innerHTML = "expand_less";
 	else
-	   document.getElementById("menuButton").className = "menuButtonUnselected";
+	   document.getElementById("mnu-drp-arrow").innerHTML = "expand_more";
 	
 	
   
@@ -28,11 +31,22 @@
 function showDropdownNavLinks() {
   var y = document.getElementById("dropdown-nav-links");
   
+  
   if (y.style.display !== 'block') {
     y.style.display = "block";
   } else {
     y.style.display = "none";
   }
+  
+  
+ if(document.getElementById("art-drp-arrow").innerHTML == "expand_more")
+	document.getElementById("art-drp-arrow").innerHTML = "expand_less";
+	else
+	   document.getElementById("art-drp-arrow").innerHTML = "expand_more";
+  
+  
+  
+  
 } 
 
 </script>
@@ -42,18 +56,18 @@ function showDropdownNavLinks() {
 
 
 
-<button class="menuButtonUnselected" id="menuButton" type="button" onclick="showMainNavLinks()">Menu</button>
+<button class="menuButtonUnselected" id="menuButton" type="button" onclick="showMainNavLinks()"><span class="material-icons" id="mnu-drp-arrow">expand_more</span>Menu</button>
 
 
 <div id="main-nav-links">
-	<button id="articles-button" type="button" onclick="showDropdownNavLinks()">Articles & Guides <i></i> </button> 
+	<button class="articleButtonUnselected" id="articles-button" type="button" onclick="showDropdownNavLinks()"><span class="material-icons" id="art-drp-arrow">expand_more</span>Articles & Guides <i></i> </button> 
 	<a href="#">Pest Library</a>
 	<a href="#">Find A Local Exterminator</a>
 	<a href="#">PMP Resources</a>
 </div>
 
 
-<img src="/img/icons/expand-more.svg" alt="expand">
+
 
 
 
