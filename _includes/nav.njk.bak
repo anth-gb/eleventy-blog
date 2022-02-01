@@ -1,69 +1,65 @@
 
+
 <script>
-	function showMainNavLinks() {
-  var x = document.getElementById("main-nav-links");
-  
-  
-	if (x.style.display !== 'block') {
-		x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  
-
-		
-	
-	
-	if(document.getElementById("mnu-drp-arrow").innerHTML == "expand_more")
-	document.getElementById("mnu-drp-arrow").innerHTML = "expand_less";
-	else
-	   document.getElementById("mnu-drp-arrow").innerHTML = "expand_more";
-	
-	
-  
-} 
-
-
-
-
-
-
-function showDropdownNavLinks() {
-  var y = document.getElementById("dropdown-nav-links");
-  
-  
-  if (y.style.display !== 'block') {
-    y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
-  
-  
- if(document.getElementById("drp-arrow").innerHTML == "expand_more")
-	document.getElementById("drp-arrow").innerHTML = "expand_less";
-	else
-	   document.getElementById("drp-arrow").innerHTML = "expand_more";
-  
-  
-  
-  
-} 
-
+{% include "js/nav.js" %}
 </script>
 
 
 
+<div class="main-nav-cont">
+
+	<div class="secondary-nav-cont">
+		<a class="main-logo" href="#">Canadian Pest Authority</a>
 
 
+		<button class="menuButtonUnselected" id="menuButton" type="button" onclick="showMainNavLinks()"><i class="material-icons" id="mnu-drp-arrow">expand_more</i>Menu</button>
+	</div>
 
-<button class="menuButtonUnselected" id="menuButton" type="button" onclick="showMainNavLinks()"><span class="material-icons" id="mnu-drp-arrow">expand_more</span>Menu</button>
+	<div id="main-nav-links">
 
+		
+			
+		<div class="main-nav-links-links-cont">
+			<button class="articleButtonUnselected" id="articles-button" type="button" onclick="showDropdownNavLinks()"><i class="material-icons" id="art-drp-arrow">expand_more</i>Articles & Guides</button> 
+			
+				
+			
+				<div class="dropdown-nav-links-collapsed-mobile" id="dropdown-nav-links-mobile">
 
-<div id="main-nav-links">
-	<button class="articleButtonUnselected" id="articles-button" type="button" onclick="showDropdownNavLinks()"><span class="material-icons" id="drp-arrow">expand_more</span>Articles & Guides <i></i> </button> 
-	<a href="#">Pest Library</a>
-	<a href="#">Find A Local Exterminator</a>
-	<a href="#">PMP Resources</a>
+					<div class="dropdown-nav-links-desc">
+						<p>This is a description of the navigation links.</p>
+					</div>
+
+					<div class="dropdown-nav-links-link-cont">
+					
+						<a href="#">Residential Pest Control</a>
+						<a href="#">Commercial / Industrial Pest Control</a>
+						<a href="#">Wildlife Control</a>
+						<a href="#">Pesticide Information</a>
+						
+					</div>
+					
+					
+					
+				</div>
+			
+			
+			
+			<hr class="hr-mobile">
+			
+			<a href="#">Pest Library</a>
+			
+			<hr class="hr-mobile">
+			
+			<a href="#">Find A Local Exterminator</a>
+			
+			<hr class="hr-mobile">
+			
+			<a href="#">PMP Resources</a>
+			
+			hr class="hr-mobile">
+		</div>
+	</div>
 </div>
 
 
@@ -71,11 +67,21 @@ function showDropdownNavLinks() {
 
 
 
-<div id="dropdown-nav-links">
-	<a href="#">Residential Pest Control</a>
-	<a href="#">Commercial / Industrial Pest Control</a>
-	<a href="#">Wildlife Control</a>
-	<a href="#">Pesticide Information</a>
+<div class="dropdown-nav-links-collapsed" id="dropdown-nav-links">
+
+	<div class="dropdown-nav-links-desc">
+		<p>This is a description of the navigation links.</p>
+	</div>
+
+	<div class="dropdown-nav-links-link-cont">
+	
+		<a href="#">Residential Pest Control</a>
+		<a href="#">Commercial / Industrial Pest Control</a>
+		<a href="#">Wildlife Control</a>
+		<a href="#">Pesticide Information</a>
+		
+	</div>
+	
 </div>
 
 
