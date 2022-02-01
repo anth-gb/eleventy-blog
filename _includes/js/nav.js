@@ -1,8 +1,11 @@
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+function showDiv() {
+   document.getElementById('main-nav-links').style.display = "block";
 }
+
+
+
+if(document.getElementById("menuButton").className !== "menuButtonSelected")
+	   document.getElementById("menuButton").className = "menuButtonSelected";
+	else
+	   document.getElementById("menuButton").className = "menuButtonUnselected";
+	}
